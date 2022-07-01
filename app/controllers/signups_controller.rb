@@ -4,7 +4,7 @@ wrap_parameters form: []
 
     def create
         signup = Signup.create!(signup_params)
-        render json: signup, serializer: SignupActivitySerializer, status: :created
+        render json: signup.activity, status: :created
     end
 
 
